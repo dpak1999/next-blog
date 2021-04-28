@@ -1,10 +1,11 @@
 /** @format */
+import ReactMarkdown from "react-markdown";
 
 import PostHeader from "./post-header";
 import classes from "./post-content.module.css";
 
 const DUMMY_POST = {
-  title: "welcome the choice is either to repel the provision blind fault",
+  title: "welcome the choice to repel the provision",
   image: "bg1.jpg",
   content: "# frist post",
   date: "2022-02-10",
@@ -17,7 +18,7 @@ function PostContent() {
   return (
     <article className={classes.content}>
       <PostHeader title={DUMMY_POST.title} image={imagePath} />
-      {DUMMY_POST.content}
+      <ReactMarkdown>{DUMMY_POST.content}</ReactMarkdown>
     </article>
   );
 }
